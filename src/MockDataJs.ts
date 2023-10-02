@@ -18,7 +18,9 @@ export const mockData = {
         division: "Em até 3x de",
         installment: "R$ 33,00",
         new: true,
-        freeShipping: true
+        freeShipping: true,
+        discount: "-30%",
+        size: ["P", "M", "G", "GG", "XG"]
       },
       {
         id: "2",
@@ -28,7 +30,8 @@ export const mockData = {
         division: "Em até 6x de",
         installment: "R$ 33,00",
         new: false,
-        freeShipping: true
+        freeShipping: true,
+        size: ["P", "M", "G", "GG", "XG"]
       },
       {
         id: "3",
@@ -38,7 +41,8 @@ export const mockData = {
         division: "Em até 6x de",
         installment: "R$ 91,50",
         new: false,
-        freeShipping: false
+        freeShipping: false,
+        size: ["P", "M", "G", "GG", "XG"]
       },
       {
         id: "4",
@@ -48,7 +52,8 @@ export const mockData = {
         division: "Em até 2x de",
         installment: "R$ 34,95",
         new: true,
-        freeShipping: false
+        freeShipping: false,
+        size: ["P", "M", "G", "GG", "XG"]
       },
       {
         id: "5",
@@ -58,7 +63,8 @@ export const mockData = {
         division: "Em até 2x de",
         installment: "R$ 30,00",
         new: false,
-        freeShipping: false
+        freeShipping: false,
+        size: ["U"]
       },
       {
         id: "6",
@@ -69,7 +75,9 @@ export const mockData = {
         division: "Em até 3x de",
         installment: "R$ 33,00",
         new: false,
-        freeShipping: false
+        freeShipping: false,
+        discount: "-30%",
+        size: ["P", "M", "G", "GG", "XG"]
       },
       {
         id: "7",
@@ -79,7 +87,8 @@ export const mockData = {
         division: "Em até 2x de",
         installment: "R$ 30,00",
         new: false,
-        freeShipping: false
+        freeShipping: false,
+        size: ["U"]
       },
       {
         id: "8",
@@ -87,7 +96,8 @@ export const mockData = {
         name: "Kit 4 Bottons 2b Waves",
         price: "R$ 15,00",
         new: false,
-        freeShipping: false
+        freeShipping: false,
+        size: ["U"]
       },
       {
         id: "9",
@@ -98,7 +108,9 @@ export const mockData = {
         division: "Em até 3x de",
         installment: "R$ 33,00",
         new: true,
-        freeShipping: true
+        freeShipping: true,
+        discount: "-30%",
+        size: ["P", "M", "G", "GG", "XG"]
       }
     ]
   };

@@ -9,11 +9,15 @@ import { Footer } from "../../components/Footer";
 import { useContext } from "react";
 import { ContextCart } from "../../providers/ContextCart"
 import { ModalCart } from "../../components/Modal";
+import { mockData } from "../../MockDataJs";
 
 
 
 export const Dashboard = () =>{
-    const { openModal, isModalOpen, closeModal, addProductinCart, setaddProductinCart} = useContext(ContextCart);
+    const { openModal, isModalOpen, closeModal, addProductinCart, setaddProductinCart, cart, setCart, buyProduct } = useContext(ContextCart);
+    const realeasesProducts = mockData.products.slice(0, 4);
+    const bestSellersProducts = mockData.products.slice(4, 8);
+    const lastProduct = mockData.products[mockData.products.length - 1];
 
     return(
         <StyledDashboard>
@@ -22,12 +26,14 @@ export const Dashboard = () =>{
                 <img className='logo-banner' src={Banner} alt='Banner' />
             </div>
             <div className="container-products">
-                <Realises />
-                <BestSellers />
+                <Realises realeasesProducts={realeasesProducts} buyProduct={buyProduct}/>
+                <BestSellers bestSellersProducts={bestSellersProducts} buyProduct={buyProduct}/>
                 <Categories />
-                <Offers />
+                <Offers lastProduct={lastProduct} buyProduct={buyProduct}/>
                 <Footer />
-                <ModalCart isOpen={isModalOpen} onClose={closeModal} addProductinCart={addProductinCart} setaddProductinCart={setaddProductinCart}/>
+                <ModalCart isOpen={isModalOpen} onClose={closeModal} addProductinCart={addProductinCart} setaddProductinCart={setaddProductinCart}
+                cart={cart} setCart={setCart}
+                />
             </div>
 
         </StyledDashboard>

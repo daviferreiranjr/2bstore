@@ -1,15 +1,14 @@
 import { StyledProductDetails } from "./styles";
-import { mockData } from "../../MockDataJs";
-import { Product } from  "../../pages/Product/index"
+import { Product } from "../../providers/ContextCart";
+import { MouseEvent } from 'react';
 
 interface ProductInfoProps {
-  productId: number | string | undefined;
+  product?: Product
   setaddProductinCart: React.Dispatch<React.SetStateAction<Product | null>>;
+  buyProduct: (event: MouseEvent<HTMLButtonElement>, product: Product) => void;
 }
 
-export const InfoProduct = ({ productId, setaddProductinCart }: ProductInfoProps) => {
-
-  const product = mockData.products.find((product) => product.id === productId);
+export const InfoProduct = ({ product, buyProduct }: ProductInfoProps) => {
 
     return (
       <StyledProductDetails>
@@ -45,7 +44,7 @@ export const InfoProduct = ({ productId, setaddProductinCart }: ProductInfoProps
               <li>XG</li>
             </ul>
           </div>
-          <button onClick={() => product && setaddProductinCart(product)}>ADICIONAR AO CARRINHO</button>
+          <button onClick={(event) => buyProduct(event, product)}>ADICIONAR AO CARRINHO</button>
 
           
             <div className="info-shipping-container">

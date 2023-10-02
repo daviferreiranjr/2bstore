@@ -49,6 +49,12 @@ div{
             font-weight: 700;
             letter-spacing: 1.08px;
         }
+        li:hover {
+            color: var(--rosa-2b-dark);
+        }  
+        span:hover {
+            color: var(--rosa-2b-medium);
+        }  
         span{
             cursor: pointer;
             font-size: 14px;

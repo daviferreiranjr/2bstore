@@ -8,20 +8,24 @@ import { StyledInfoProduct } from "./styles"
 import { ModalCart } from "../../components/Modal";
 import { useContext } from "react";
 import { ContextCart } from "../../providers/ContextCart"
+import { mockData } from "../../MockDataJs";
 
 
 export const InfoProductPage = () => {
     const { id } = useParams();
-    const { openModal, isModalOpen, closeModal, addProductinCart, setaddProductinCart} = useContext(ContextCart);
+    const { openModal, isModalOpen, closeModal, addProductinCart, setaddProductinCart, cart, setCart, buyProduct} = useContext(ContextCart);
+    const product = mockData.products.find((product) => product.id === id);
+    const bestSellersProducts = mockData.products.slice(4, 8);
 
     return(
         <StyledInfoProduct>
             <Header openModal={openModal}/>
-            <InfoProduct productId={id} setaddProductinCart={setaddProductinCart}/>
+            <InfoProduct product={product} setaddProductinCart={setaddProductinCart} buyProduct={buyProduct}/>
             <DescriptionProduct />
-            <BestSellers />
+            <BestSellers bestSellersProducts={bestSellersProducts} buyProduct={buyProduct}/>
             <Footer />
-            <ModalCart isOpen={isModalOpen} onClose={closeModal} addProductinCart={addProductinCart} setaddProductinCart={setaddProductinCart}/>
+            <ModalCart isOpen={isModalOpen} onClose={closeModal} addProductinCart={addProductinCart} setaddProductinCart={setaddProductinCart}
+            cart={cart} setCart={setCart}/>
         </StyledInfoProduct>
     )
 }

@@ -5,14 +5,38 @@ import Bottons from '../../assets/banner_04.png'
 import { StyledCategoriesSession } from './styles';
 
 export const Categories = () => {
+
+  const categories = [
+    {
+      id: 1,
+      src: TShirts,
+      alt: "TShirts"
+    },
+    {
+      id: 2,
+      src: Mugs,
+      alt: "Mugs"
+    },
+    {
+      id: 3,
+      src: Squeeze,
+      alt: "Squeeze"
+    },
+    {
+      id: 4,
+      src: Bottons,
+      alt: "Bottons"
+    },
+  ]
     return (
       <StyledCategoriesSession>
         <section className='categories'>
             <ul>
-                <li><img src={TShirts} alt="TShirts" /></li>
-                <li><img src={Mugs} alt="Mugs" /></li>
-                <li><img src={Squeeze} alt="Squeeze" /></li>
-                <li><img src={Bottons} alt="Bottons" /></li>
+              {categories.map((el) => (
+                <li key={el.id}>
+                  <img src={el.src} alt={el.alt} />
+                </li>
+              ))}
             </ul>
         </section>
       </StyledCategoriesSession>

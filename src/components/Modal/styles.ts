@@ -1,11 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledModalCart = styled.aside`
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-
+    
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -18,28 +14,41 @@ export const StyledModalCart = styled.aside`
   align-items: center;
   z-index: 1000;
 
-  .header-modal{
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    top: 10px;
-    padding: 2rem;
-
-    h2{
-        color: var(--azul-universe-darkest);
-        letter-spacing: 0.9px;
-        font-size: 22px;
-        font-weight: 700;
-    }
-  }
-
   .modal{
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
     gap: 2rem;
+    background: var(--neutral-lightest);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 30%;
+    height: 100%;
+    overflow: auto;
 
-    .cart-null{
+    .header-modal{
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        top: 10px;
+        padding: 1rem;
+        width: 100%;
+
+        h2{
+            color: var(--azul-universe-darkest);
+            letter-spacing: 0.9px;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .close-button {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+}
+  }
+
+  .cart-null{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -74,29 +83,8 @@ export const StyledModalCart = styled.aside`
             text-align: center;
         }
     }
-  }
-}
 
-.modal {
-  background: var(--neutral-lightest);
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  width: 30%;
-  height: 100%;
-  overflow: auto;
-}
-
-.close-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-
-.cart-products{
+    .cart-products{
     ul{
         display: flex;
         flex-direction: column;
@@ -176,6 +164,52 @@ export const StyledModalCart = styled.aside`
                 }
             }
         }
+
+        .total-monay{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 1rem;
+            padding: 1rem;
+
+            .total-monay-value{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+            .title{
+                color: var(--azul-universe-darkest);
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 16px;
+            }
+            .price{
+                font-size: 14px;
+                line-height: 16px;
+                color: var(--azul-universe-darkest);
+                font-weight: 700;
+            }
+
+        }
+            button{
+            width: 100%;
+            background: var(--rosa-2b-dark) 0% 0% no-repeat padding-box;
+            border-radius: 24px;
+            opacity: 1;
+            color: var(--rosa-2b-lightest);
+            padding: 1rem;
+            font-size: 14px;
+            font-weight: 700;
+            text-align: center;
+        }
     }
 }
+    }
+  }
+
+
+}
+
+
+
 `;
