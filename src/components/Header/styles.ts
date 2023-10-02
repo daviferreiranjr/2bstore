@@ -3,10 +3,8 @@ import styled from 'styled-components';
 export const StyledHeader = styled.header`
 
   display: flex;
-  align-items: center;
   flex-direction: column;
   background-color: var(--azul-universe-darkest);
-  justify-content: center;
   position: relative;
   top: 0px;
   left: 0px;
@@ -34,14 +32,20 @@ div{
     border-bottom: 1px solid #54507367;
     height: 100%;
     padding: 2rem;
+    
     img{
         cursor: pointer;
     }
+
     ul{
         display: flex;
         align-items: center;
         flex-direction: row;
         gap: 2rem;
+
+        @media screen and (max-width: 599px) {
+        display: none;
+        }
 
         li{
             color: var(--rosa-2b-medium);
@@ -62,5 +66,24 @@ div{
             letter-spacing: 1.08px;
         };
     }
+    .countTotalProducts{
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 120px;    
+        border-radius: 50%;
+        background-color: var(--rosa-2b-dark);
+        color: var(--neutral-lightest);
+        padding: 5px;
+        height: 18px;
+        width: 18px;
+        font-size: 14px;
+        font-weight: 500;
+
+        @media screen and (max-width: 599px) {
+        right: 20px;    
+        }
+    } 
+
 }
 `;

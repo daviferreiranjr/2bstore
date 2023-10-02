@@ -21,7 +21,7 @@ export const Dashboard = () =>{
 
     return(
         <StyledDashboard>
-            <Header openModal={openModal}/>
+            <Header openModal={openModal} cart={cart}/>
             <div className="div-banner">
                 <img className='logo-banner' src={Banner} alt='Banner' />
             </div>

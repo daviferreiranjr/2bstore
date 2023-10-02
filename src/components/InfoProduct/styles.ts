@@ -7,15 +7,35 @@ export const StyledProductDetails = styled.main`
     justify-content: space-around;
     max-width: 90%;
 
+    @media screen and (max-width: 599px) {
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 2rem;
+            max-width: 100%;
+            padding: 1rem;
+        }
+
+
     .info-images{
         display: flex;
         justify-content: space-around;
         box-sizing: border-box;
 
+        @media screen and (max-width: 599px) {
+            justify-content: center;
+            align-items: center;
+            flex-direction: column-reverse;
+        }
+
         .extra-images{
             display: flex;
             flex-direction: column;
             gap: 1rem;
+
+            @media screen and (max-width: 599px) {
+            flex-direction: row;
+            }
     
             img{
                 max-width: 100%;
@@ -41,6 +61,11 @@ export const StyledProductDetails = styled.main`
         gap: 1rem;
         width: 40%;
 
+        @media screen and (max-width: 599px) {
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
 
         .tittle{
             display: flex;
@@ -59,6 +84,11 @@ export const StyledProductDetails = styled.main`
                 font-size: 14px;
                 font-weight: 400;
             }
+
+        }
+        
+        .buyProduct:hover{
+            background-color: var(--rosa-2b-darkest);
         }
 
         .price{
@@ -118,10 +148,19 @@ export const StyledProductDetails = styled.main`
                 gap: 0.5rem;
 
                 li{
-                    border-radius: 16px;
                     color: var(--rosa-2b-dark);
                     border: 1px solid var(--rosa-2b-medium);
-                    padding: 0.5rem;
+                    padding: 1rem;
+                    font-weight: 700;
+                    height: 32px;
+                    width: 32px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                li:hover{
+                    border: 1px solid var(--rosa-2b-dark);
                 }
             }
         }
@@ -185,12 +224,23 @@ export const StyledProductDetails = styled.main`
                     text-align: center;
                 }
 
+                button:hover{
+                    background-color: var(--rosa-2b-dark);
+                    color: var(--rosa-2b-lightest);
+                }
+
                 a{
                     font-size: 14px;
                     font-weight: 400;
                     color: var(--rosa-2b-dark);
                     width: 30%;
+                    cursor: pointer;
+                }
 
+                a:hover{
+                    border-bottom: 1px solid var(--rosa-2b-dark);
+                    align-self: center;
+                    width: 21%;
                 }
             }
         }

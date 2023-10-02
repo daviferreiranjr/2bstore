@@ -13,13 +13,13 @@ import { mockData } from "../../MockDataJs";
 
 export const InfoProductPage = () => {
     const { id } = useParams();
-    const { openModal, isModalOpen, closeModal, addProductinCart, setaddProductinCart, cart, setCart, buyProduct} = useContext(ContextCart);
+    const { openModal, isModalOpen, closeModal, addProductinCart, setaddProductinCart, cart, setCart, buyProduct } = useContext(ContextCart);
     const product = mockData.products.find((product) => product.id === id);
     const bestSellersProducts = mockData.products.slice(4, 8);
 
     return(
         <StyledInfoProduct>
-            <Header openModal={openModal}/>
+            <Header openModal={openModal} cart={cart}/>
             <InfoProduct product={product} setaddProductinCart={setaddProductinCart} buyProduct={buyProduct}/>
             <DescriptionProduct />
             <BestSellers bestSellersProducts={bestSellersProducts} buyProduct={buyProduct}/>

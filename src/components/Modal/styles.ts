@@ -26,6 +26,11 @@ export const StyledModalCart = styled.aside`
     height: 100%;
     overflow: auto;
 
+    @media screen and (max-width: 599px) {
+        width: 100%;
+        height: 100%;
+    }
+
     .header-modal{
         display: flex;
         justify-content: space-between;
@@ -54,7 +59,8 @@ export const StyledModalCart = styled.aside`
         justify-content: center;
         align-items: center;
         gap: 5rem;
-        width: 60%;
+        width: 80%;
+        height: 70%;
 
         h2{
             color: var(--azul-universe-darkest);
@@ -81,6 +87,9 @@ export const StyledModalCart = styled.aside`
             font-size: 14px;
             font-weight: 700;
             text-align: center;
+        }
+        button:hover{
+            background-color: var(--rosa-2b-darkest)
         }
     }
 
@@ -147,6 +156,7 @@ export const StyledModalCart = styled.aside`
                     height: 16px;
                     align-self: flex-end;
                 }
+                       
                 .info-price{
                     .original-price{
                         font-weight: 400;
@@ -171,6 +181,7 @@ export const StyledModalCart = styled.aside`
             width: 100%;
             gap: 1rem;
             padding: 1rem;
+            z-index: 100;
 
             .total-monay-value{
                 display: flex;
@@ -202,14 +213,12 @@ export const StyledModalCart = styled.aside`
             font-weight: 700;
             text-align: center;
         }
+        button:hover{
+            background-color: var(--rosa-2b-darkest)
+        }
     }
 }
     }
   }
-
-
 }
-
-
-
 `;

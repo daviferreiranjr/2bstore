@@ -11,6 +11,13 @@ export const StyledRealisesSession = styled.section`
     flex-direction: row;
     gap: 2rem;
 
+    @media screen and (max-width: 599px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+    }
+    
     .arrow{
         border: 1px solid #E0E0E0;
         opacity: 1;
@@ -109,11 +116,13 @@ export const StyledRealisesSession = styled.section`
         flex-direction: row;
         gap: 0.5rem;
         li{
-            border-radius: 16px;
             font-weight: 700;
             color: var(--rosa-2b-dark);
             border: 1px solid var(--rosa-2b-medium);
             padding: 0.3rem;
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
         }
         li:hover{
             border: 1px solid var(--rosa-2b-dark);

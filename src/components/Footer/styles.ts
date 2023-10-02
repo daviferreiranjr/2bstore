@@ -14,12 +14,19 @@ export const StyledFooter = styled.section`
         justify-content: space-between;
         align-items: center;
         width: 90%; 
+
+        @media screen and (max-width: 599px) {
+            flex-direction: column;
+            gap: 3rem;
+            padding: 1rem;
+        }
     }
 
     .div-infos{
         display: flex;
         flex-direction: column;
         gap: 1rem;
+
         h2{
             font-weight: 600;
             color: var(--azul-universe-darkest);

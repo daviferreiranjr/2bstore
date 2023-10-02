@@ -11,6 +11,7 @@ export const Global = createGlobalStyle`
     --rosa-2b-medium: #FFCCD8;
     --azul-universe-lightest: #F8F7FC;
     --rosa-2b-dark: #E8335D;
+    --rosa-2b-darkest: #CC2D52;
     --grey-color: #00000080; 
 
 
@@ -70,4 +71,11 @@ export const Global = createGlobalStyle`
   button{
     cursor: pointer;
   }
+
+  @media screen and (max-width: 599px) {
+    html, body {
+      overflow-x: hidden;
+      max-width: 100%;
+    }
+  }  
 `;

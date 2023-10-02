@@ -36,15 +36,13 @@ export const InfoProduct = ({ product, buyProduct }: ProductInfoProps) => {
             <div className="size-select">
               <h3>Tamanho</h3><p>Selecione</p>
             </div>
-            <ul>
-              <li>P</li>
-              <li>M</li>
-              <li>G</li>
-              <li>GG</li>
-              <li>XG</li>
+            <ul className="size-container">
+              {product?.size?.map((size) => (
+              <li key={size}>{size}</li>
+            ))}
             </ul>
           </div>
-          <button onClick={(event) => buyProduct(event, product)}>ADICIONAR AO CARRINHO</button>
+          <button className="buyProduct" onClick={(event) => buyProduct(event, product)}>ADICIONAR AO CARRINHO</button>
 
           
             <div className="info-shipping-container">
