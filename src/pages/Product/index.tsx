@@ -20,7 +20,7 @@ export const InfoProductPage = () => {
     return(
         <StyledInfoProduct>
             <Header openModal={openModal} cart={cart}/>
-            <InfoProduct product={product} setaddProductinCart={setaddProductinCart} buyProduct={buyProduct}/>
+            <InfoProduct product={product} buyProduct={buyProduct}/>
             <DescriptionProduct />
             <BestSellers bestSellersProducts={bestSellersProducts} buyProduct={buyProduct}/>
             <Footer />

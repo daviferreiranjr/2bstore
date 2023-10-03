@@ -9,7 +9,7 @@ interface ModalProps {
     isOpen: boolean;
     onClose: () => void;
     addProductinCart?: Product | null;
-    setaddProductinCart: React.Dispatch<React.SetStateAction<Product | null>>;
+    setaddProductinCart: React.Dispatch<React.SetStateAction<Product | null | undefined>>;
     cart: Product[];
     setCart: React.Dispatch<React.SetStateAction<Product[]>>
   }

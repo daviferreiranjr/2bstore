@@ -19,11 +19,11 @@ interface CartContextType {
     openModal: () => void;
     closeModal: () => void;
     isModalOpen: boolean;
-    addProductinCart: Product | null; 
-    setaddProductinCart: React.Dispatch<React.SetStateAction<Product | null>>;
+    addProductinCart: Product | null | undefined; 
+    setaddProductinCart: React.Dispatch<React.SetStateAction<Product | null | undefined>>;
     cart: Product[]; 
     setCart: React.Dispatch<React.SetStateAction<Product[]>>
-    buyProduct: (event: MouseEvent<HTMLButtonElement>, product: Product) => void;
+    buyProduct: (event: MouseEvent<HTMLButtonElement>, product?: Product) => void;
   }
 
 
@@ -45,7 +45,7 @@ interface CartProviderProps {
 
 export const CartProvider = ({ children }: CartProviderProps) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [addProductinCart, setaddProductinCart] = useState<Product | null>(null);
+    const [addProductinCart, setaddProductinCart] = useState<Product | null | undefined>(null);
     const [cart, setCart] = useState<Product[]>([]);
 
 
@@ -57,7 +57,7 @@ export const CartProvider = ({ children }: CartProviderProps) => {
     setIsModalOpen(false);
   };
 
-  const buyProduct = (event: MouseEvent<HTMLButtonElement>, product: Product) => {
+  const buyProduct = (event: MouseEvent<HTMLButtonElement>, product?: Product) => {
       event.stopPropagation();
       setaddProductinCart(product);
       openModal()

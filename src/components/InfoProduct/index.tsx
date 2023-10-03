@@ -3,9 +3,8 @@ import { Product } from "../../providers/ContextCart";
 import { MouseEvent } from 'react';
 
 interface ProductInfoProps {
-  product?: Product
-  setaddProductinCart: React.Dispatch<React.SetStateAction<Product | null>>;
-  buyProduct: (event: MouseEvent<HTMLButtonElement>, product: Product) => void;
+  product?: Product 
+  buyProduct: (event: MouseEvent<HTMLButtonElement>, product?: Product) => void;
 }
 
 export const InfoProduct = ({ product, buyProduct }: ProductInfoProps) => {
