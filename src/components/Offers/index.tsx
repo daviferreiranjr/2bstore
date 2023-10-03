@@ -17,7 +17,6 @@ export const Offers = ({  lastProduct, buyProduct }: OffersProductProps) => {
 
     function navigateToProductDetails(productId: string) {
         navigate(`/product/${productId}`);
-        window.location.reload();
     } 
 
     return (

@@ -15,7 +15,6 @@ export const BestSellers = ({ bestSellersProducts, buyProduct }: BestSellersProd
 
     function navigateToProductDetails(productId: string) {
       navigate(`/product/${productId}`);
-      window.location.reload();
     } 
 
     return (
